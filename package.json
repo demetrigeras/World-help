@@ -1,0 +1,24 @@
+{
+  "name": "world-help",
+  "version": "1.0.0",
+  "description": "App used to connect to charitable organizations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demetrigeras/World-help.git"
+  },
+  "bugs": {
+    "url": "https://github.com/demetrigeras/World-help/issues"
+  },
+  "homepage": "https://github.com/demetrigeras/World-help#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0"
+  }
+}

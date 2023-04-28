@@ -1,0 +1,163 @@
+[
+  {
+    "name": "Feeding America",
+    "category": "Domestic Needs",
+    "private_donations": "$4.06 B",
+    "total_revenue": "$4.21 B",
+    "fundraising_efficiency": 99,
+    "charitable_commitment": 99
+  },
+  {
+    "name": "United Way Worldwide",
+    "category": "Domestic Needs",
+    "private_donations": "$2.77 B",
+    "total_revenue": "$3.89 B",
+    "fundraising_efficiency": 88,
+    "charitable_commitment": 85
+  },
+  {
+    "name": "St. Jude Children's Research Hospital",
+    "category": "Medical",
+    "private_donations": "$2.42 B",
+    "total_revenue": "$2.33 B",
+    "fundraising_efficiency": 85,
+    "charitable_commitment": 69
+  },
+  {
+    "name": "Salvation Army",
+    "category": "Domestic Needs",
+    "private_donations": "$2.34 B",
+    "total_revenue": "$5.79 B",
+    "fundraising_efficiency": 90,
+    "charitable_commitment": 82
+  },
+  {
+    "name": "Direct Relief",
+    "category": "International Needs",
+    "private_donations": "$2.21 B",
+    "total_revenue": "$2.22 B",
+    "fundraising_efficiency": 100,
+    "charitable_commitment": 100
+  },
+  {
+    "name": "Good 360",
+    "category": "International Needs",
+    "private_donations": "$1.68 B",
+    "total_revenue": "$1.69 B",
+    "fundraising_efficiency": 100,
+    "charitable_commitment": 100
+  },
+  {
+    "name": "Goodwill Industries International",
+    "category": "Domestic Needs",
+    "private_donations": "$1.44 B",
+    "total_revenue": "$7.41 B",
+    "fundraising_efficiency": 99,
+    "charitable_commitment": 89
+  },
+  {
+    "name": "YMCA of the USA",
+    "category": "Youth",
+    "private_donations": "$1.41 B",
+    "total_revenue": "$7.44 B",
+    "fundraising_efficiency": 90,
+    "charitable_commitment": 84
+  },
+  {
+    "name": "Habitat for Humanity International",
+    "category": "International Needs",
+    "private_donations": "$1.27 B",
+    "total_revenue": "$2.13 B",
+    "fundraising_efficiency": 88,
+    "charitable_commitment": 83
+  },
+  {
+    "name": "Americares",
+    "category": "International Needs",
+    "private_donations": "$1.22 B",
+    "total_revenue": "$1.24 B",
+    "fundraising_efficiency": 99,
+    "charitable_commitment": 98
+  },
+  {
+    "name": "Boys & Girls Clubs of America",
+    "category": "Youth",
+    "private_donations": "$1.18 B",
+    "total_revenue": "$2.48 B",
+    "fundraising_efficiency": 89,
+    "charitable_commitment": 80
+  },
+
+  {
+    "name": "Compassion International",
+    "category": "International Needs",
+    "private_donations": "$1.14 B",
+    "total_revenue": "$1.15 B",
+    "fundraising_efficiency": 89,
+    "charitable_commitment": 82
+  },
+  {
+    "name": "Catholic Charities USA",
+    "category": "Domestic Needs",
+    "private_donations": "$1.04 B",
+    "total_revenue": "$4.67 B",
+    "fundraising_efficiency": 91,
+    "charitable_commitment": 87
+  },
+  {
+    "name": "Samaritan's Purse",
+    "category": "Domestic Needs",
+    "private_donations": "$953 M",
+    "total_revenue": "$1.01 B",
+    "fundraising_efficiency": 94,
+    "charitable_commitment": 85
+  },
+  {
+    "name": "Nature Conservancy",
+    "category": "Environment/Animal",
+    "private_donations": "$884 M",
+    "total_revenue": "$1.83 B",
+    "fundraising_efficiency": 86,
+    "charitable_commitment": 68
+  },
+  {
+    "name": "World Vision",
+    "category": "International Needs",
+    "private_donations": "$882 M",
+    "total_revenue": "$1.31 B",
+    "fundraising_efficiency": 92,
+    "charitable_commitment": 90
+  },
+  {
+    "name": "Food for the Poor",
+    "category": "International Needs",
+    "private_donations": "$837 M",
+    "total_revenue": "$857 M",
+    "fundraising_efficiency": 95,
+    "charitable_commitment": 94
+  },
+  {
+    "name": "American National Red Cross",
+    "category": "Domestic Needs",
+    "private_donations": "$835 M",
+    "total_revenue": "$3.39 B",
+    "fundraising_efficiency": 80,
+    "charitable_commitment": 91
+  },
+  {
+    "name": "MAP International",
+    "category": "International Needs",
+    "private_donations": "$819 M",
+    "total_revenue": "$822 M",
+    "fundraising_efficiency": 100,
+    "charitable_commitment": 99
+  },
+  {
+    "name": "Step Up for Students",
+    "category": "Education",
+    "private_donations": "$819 M",
+    "total_revenue": "$822 M",
+    "fundraising_efficiency": 100,
+    "charitable_commitment": 99
+  }
+]

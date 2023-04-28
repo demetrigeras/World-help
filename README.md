@@ -3,7 +3,7 @@
 World Help is an application for connecting donors to reputable charities. Users can browse through charities and contribute to their favorites by creating a Donor profile and making a donation pledge.
 
 
-## World-helpList of features 
+## List of features 
 
 - Look through logos and names of charities 
 - Button to update donors/ donations 

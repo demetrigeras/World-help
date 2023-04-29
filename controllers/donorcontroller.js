@@ -1,4 +1,4 @@
-import Donor from "./models/Charity.js"
+import Donor from "../models/Charity.js"
 
 
 export const getDonors = async (req, res) => {

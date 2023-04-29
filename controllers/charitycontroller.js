@@ -1,5 +1,5 @@
 // import Charity from "../models/Cat.js";
-import Charity from "./models/Charity.js"
+import Charity from "../models/Charity.js"
 
 
 export const getCharities = async (req, res) => {

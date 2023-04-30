@@ -8,7 +8,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-// app.use(logger("dev"));
 app.use(cors("dev"))
 
 app.use("/world-help", routes);

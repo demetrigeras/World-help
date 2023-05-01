@@ -1,15 +1,30 @@
-import React from 'react'
+import { useState, useEffect } from 'react';
+import { getCharity } from '../services/charities.js';
+import { useParams } from "react-router-dom";
 
 export default function Charity() {
+  const [charity, setCharity] = useState({})
+
+  let { id } = useParams()
+
+  const fetchCharity = async () => {
+    const oneCharity = await getCharity(id)
+    setCharity(oneCharity)
+  }
+
+  useEffect(() => {
+    fetchCharity()
+  }, [])
+
   return (
     <div>
-      <h1>{this.props.name}</h1>
-      <p>{this.props.category}</p>
-      <p>{this.props.private_donations}</p>
-      <p>{this.props.total_revenue}</p>
-      <p>{this.props.fundraising_efficiency}</p>
-      <p>{this.props.charitable_commitment}</p>
-      <p>{this.props.website}</p>
+      <h1>{charity.name}</h1>
+      <p>{charity.category}</p>
+      <p>{charity.private_donations}</p>
+      <p>{charity.total_revenue}</p>
+      <p>{charity.fundraising_efficiency}</p>
+      <p>{charity.charitable_commitment}</p>
+      <p>{charity.website}</p>
     </div>
   )
 }

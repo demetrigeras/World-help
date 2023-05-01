@@ -9,3 +9,13 @@ export const getCharities = async () => {
     throw error;
   }
 };
+
+export const getCharity = async (id) => {
+  try {
+    const response = await api.get(`/charity/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Failed to get charity - error: ${error}`);
+    throw error;
+  }
+}

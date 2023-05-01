@@ -7,7 +7,6 @@ export default function Home() {
 
   const fetchCharities = async () => {
     const allCharities = await getCharities()
-    console.log(allCharities)
     setCharities(allCharities)
   }
 

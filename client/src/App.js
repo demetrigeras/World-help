@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route } from "react-router-dom"
 import Nav from "./components/Nav.jsx"
 import Home from "./screens/Home.jsx"
-import Charity from './screens/Charity';
+import Charity from "./screens/Charity.jsx";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/charity" element={<Charity />} />
+        <Route path="/charity/:id" element={<Charity />} />
       </Routes>
     </div>
   );

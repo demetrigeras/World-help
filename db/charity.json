@@ -162,8 +162,8 @@
     "fundraising_efficiency": 86,
     "charitable_commitment": 68,
     "website": "https://www.nature.org/en-us/",
-    "logo":"file:///Users/omarwhite/Downloads/tnc-logo-primary-registered-dark-text.svg",
-    "mission_statements": "To conserve the lands and waters on which all life depends."
+    "logo":"https://www.nature.org/content/dam/tnc/nature/en/logos/tnc-logo-primary-registered-dark-text.svg",
+    "misson_statements": "to conserve the lands and waters on which all life depends."
   },
   {
     "name": "World Vision",
@@ -172,7 +172,7 @@
     "total_revenue": "$1.31 B",
     "fundraising_efficiency": 92,
     "charitable_commitment": 90,
-    "website": "https://www.worldvision.org/sponsor-a-child?campaign=400057756&ds_rl=1274668&gclid=CjwKCAjwxr2iBhBJEiwAdXECw0FMZwSXJlGeFPLJ3KoeVXxh2QVoo5lxED_mhr22llo4eaqJuGuirhoCY4MQAvD_BwE&gclsrc=aw.ds",
+    "website": "https://www.worldvision.org/",
     "logo":"https://wvusstatic.com/images/wv-logo-web.svg",
     "mission_statements": "To follow our Lord and Savior Jesus Christ in working with the poor and oppressed to promote human transformation, seek justice, and bear witness to the good news of the Kingdom of God."
   },
@@ -195,8 +195,8 @@
     "fundraising_efficiency": 80,
     "charitable_commitment": 91,
     "website": "https://www.redcross.org/",
-    "logo":"redcross.org/content/dam/redcross/imported-images/redcross-logo.png.img.png",
-    "mission_statements": "Prevents and alleviates human suffering in the face of emergencies by mobilizing the power of volunteers and the generosity of donors."
+    "logo":"https://www.redcross.org/content/dam/redcross/imported-images/redcross-logo.png.img.png",
+    "misson_statements": "prevents and alleviates human suffering in the face of emergencies by mobilizing the power of volunteers and the generosity of donors."
   },
   {
     "name": "MAP International",
@@ -205,7 +205,7 @@
     "total_revenue": "$822 M",
     "fundraising_efficiency": 100,
     "charitable_commitment": 99,
-    "website": "https://www.map.org/?form=FUNBKKQBJZZ&utm_source=google&utm_medium=search&utm_campaign=fy23springmatch&utm_term=brand&utm_content=ad1",
+    "website": "https://www.map.org/",
     "logo":"https://www.map.org/hubfs/Logos/MAP%20Intl%20Instagram%20Square%20Logo.png",
     "mission_statements": "To provide medicines and health supplies to those in need around the world so they might experience life to the fullest"
   },

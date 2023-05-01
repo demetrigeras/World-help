@@ -19,12 +19,17 @@ export default function Charity() {
   return (
     <div>
       <h1>{charity.name}</h1>
-      <p>{charity.category}</p>
-      <p>{charity.private_donations}</p>
-      <p>{charity.total_revenue}</p>
-      <p>{charity.fundraising_efficiency}</p>
-      <p>{charity.charitable_commitment}</p>
-      <p>{charity.website}</p>
+      <p>{charity.mission_statement}</p>
+      <div className='charityInfo'>
+        <p>Mission Statement: {charity.mission_statements}</p>
+        <p>Cause Category: {charity.category}</p>
+        <p>Private Donations: {charity.private_donations}</p>
+        <p>Total Revenue: {charity.total_revenue}</p>
+        <p>Fundrising Efficiency: {charity.fundraising_efficiency}%</p>
+        <p>Charitable Commitments: {charity.charitable_commitment}%</p>
+        <p>Click the link below to donate!</p>
+        <a href={charity.website}>{charity.website}</a>
+      </div>
     </div>
   )
 }

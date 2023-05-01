@@ -10,8 +10,7 @@ let Charity = new Schema({
   charitable_commitment: { type: Number },
   logo: { type: String },
   website: { type: String },
- 
-  
+  mission_statements: { type: String }
 });
 
 export default mongoose.model("Charity", Charity);

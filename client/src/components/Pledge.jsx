@@ -1,4 +1,21 @@
+import { useState, useEffect } from 'react';
+import { updatePledge, deletePledge } from '../services/pledges.js';
+
+
 export default function Pledge({pledge}) {
+    const [pledgeUpdate, setUpdatePledge] = useState("")
+
+    const handleUpdateChange = (e) => {
+        setUpdatePledge({
+            amount: e.target.value,
+        })
+    }
+
+    const handleUpdate = async (e) => {
+        e.preventDefault();
+    await updatePledge(pledge._id, pledgeUpdate)
+    }
+
     return (
         <>
         <div>{pledge.email} has donated ${pledge.amount}

@@ -41,19 +41,6 @@ export default function Charity(props) {
     })
   }
   
-  const handleupdateChange = (e) => {
-    setPledge({
-      amount: e.target.value,
-    })
-  }
-  
-  const handleUpdate = async (e) => {
-    e.preventDefault();
-   await updatePledge(id)
-  }
-
-
-
   const fetchPledges = async () => {
     const allPledges = await getPledges()
     setPledges(allPledges)

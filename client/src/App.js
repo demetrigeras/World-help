@@ -25,7 +25,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/charity/:id" element={<Charity />} />
+        <Route path="/charity/:id" element={<Charity user={user} />} />
         <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
         <Route path="/sign-in" element={<SignIn setUser={setUser} />} />
         <Route path="/sign-out" element={<SignOut setUser={setUser} />} />

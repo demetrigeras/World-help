@@ -6,10 +6,11 @@ const SignIn = (props) => {
   const navigate = useNavigate()
 
   const [form, setForm] = useState({
-    email: '',
-    password: '',
+    name: "",
+    email: "",
+    password: "",
     isError: false,
-    errorMsg: '',
+    errorMsg: ""
   })
 
   const handleChange = (event) => {
@@ -50,7 +51,7 @@ const SignIn = (props) => {
     }
   }
 
-  const { email, password } = form
+  const { name, email, password } = form
 
   return (
     <div className='form-container'>

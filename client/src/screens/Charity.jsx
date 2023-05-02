@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { getCharity } from '../services/charities.js';
 import { useParams } from "react-router-dom";
 import { createPledge } from '../services/pledges.js';
+import { updatePledge } from '../services/pledges.js';
+import { deletePledge } from '../services/pledges.js';
+import { getPledges } from '../services/pledges.js';
 
 export default function Charity(props) {
   const { user } = props
@@ -36,6 +39,19 @@ export default function Charity(props) {
       charity: charity.name
     })
   }
+  
+  const handleupdateChange = (e) => {
+    setPledge({
+      amount: e.target.value,
+    })
+  }
+  
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+   await updatePledge(id)
+  }
+
+
 
   return (
     <div>

@@ -51,6 +51,19 @@ export default function Charity(props) {
    await updatePledge(id)
   }
 
+  const handleDelete = async (e) => {
+    e.preventDefault();
+   await deletePledge(id)
+  }
+
+  const handledeleteChange =(e) => {
+    setPledge({
+      email: user.email,
+      amount: e.target.value,
+      charity: charity.name
+
+    })
+  }
 
 
   return (

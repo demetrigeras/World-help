@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { getCharity } from '../services/charities.js';
 import { useParams } from "react-router-dom";
-import { createPledge } from '../services/pledges.js';
+import { getPledges, createPledge } from '../services/pledges.js';
+import Pledge from '../components/Pledge.jsx';
 
 export default function Charity(props) {
   const { user } = props
@@ -11,6 +12,7 @@ export default function Charity(props) {
     amount: '',
     charity: ''
   })
+  const [pledges, setPledges] = useState([])
 
   let { id } = useParams()
 
@@ -21,6 +23,7 @@ export default function Charity(props) {
 
   useEffect(() => {
     fetchCharity()
+    fetchPledges()
   }, [])
 
   
@@ -30,12 +33,18 @@ export default function Charity(props) {
     await createPledge(pledge)
   }
 
-    const handleChange = (e) => {
+  const handleChange = (e) => {
     setPledge({email: user.email,
       amount: e.target.value,
       charity: charity.name
     })
   }
+
+  const fetchPledges = async () => {
+    const allPledges = await getPledges()
+    setPledges(allPledges)
+  }
+  const filteredPledges = pledges.filter(pledge => pledge.charity === charity.name)
 
   return (
     <div>
@@ -59,11 +68,11 @@ export default function Charity(props) {
         </form>
         
         <div>World-Help User Pledges</div>
-        <div>Pledge Placeholder</div>
-
+        <div>{filteredPledges.map((pledge) => (
+          <Pledge key={pledge._id} pledge={pledge}/>
+        ))}
         </div>
-
-
+      </div>
     </div>
   )
 }

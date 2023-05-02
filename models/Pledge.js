@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 let Pledge = new Schema({
     username: {type: String},
-    Amount:{type: String}
+    amount: {type: Number}
 
 })
 

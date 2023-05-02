@@ -18,3 +18,21 @@ export const createPledge = async (pledge) => {
       throw error;
     }
   };
+
+  export const updatePledge = async (pledge) => {
+    try {
+      const response = await api.put("/pledges", pledge);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  export const deletePledge = async (id) => {
+    try {
+      const response = await api.delete("/pledges", id);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  };

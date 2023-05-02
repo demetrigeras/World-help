@@ -51,6 +51,5 @@
   width: 120px;
   display: flex;
   justify-content: center;
-  object-fit:contain ;
-  color: ;
+  object-fit: contain;
 }

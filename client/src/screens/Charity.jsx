@@ -41,32 +41,6 @@ export default function Charity(props) {
     })
   }
   
-  const handleupdateChange = (e) => {
-    setPledge({
-      amount: e.target.value,
-    })
-  }
-  
-  const handleUpdate = async (e) => {
-    e.preventDefault();
-   await updatePledge(id)
-  }
-
-  const handleDelete = async (e) => {
-    e.preventDefault();
-   await deletePledge(id)
-  }
-
-  const handledeleteChange =(e) => {
-    setPledge({
-      email: user.email,
-      amount: e.target.value,
-      charity: charity.name
-
-    })
-  }
-
-
   const fetchPledges = async () => {
     const allPledges = await getPledges()
     setPledges(allPledges)

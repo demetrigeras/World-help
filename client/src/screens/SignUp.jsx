@@ -29,11 +29,12 @@ const SignUp = (props) => {
     } catch (error) {
       console.error(error)
       setForm({
-        email: '',
-        password: '',
-        passwordConfirmation: '',
+        name: "",
+        email: "",
+        password: "",
+        passwordConfirmation: "",
         isError: true,
-        errorMsg: 'Sign Up Details Invalid',
+        errorMsg: "Sign Up Details Invalid",
       })
     }
   }
@@ -51,12 +52,21 @@ const SignUp = (props) => {
     }
   }
 
-  const { email, password, passwordConfirmation } = form
+  const { name, email, password, passwordConfirmation } = form
 
   return (
     <div className='form-container'>
       <h3>Sign Up</h3>
       <form onSubmit={onSignUp}>
+        <label>Name</label>
+        <input
+          required
+          type='text'
+          name='name'
+          value={name}
+          placeholder='Enter Your Name'
+          onChange={handleChange}
+        />
         <label>Email address</label>
         <input
           required

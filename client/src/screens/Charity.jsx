@@ -1,9 +1,16 @@
 import { useState, useEffect } from 'react';
 import { getCharity } from '../services/charities.js';
 import { useParams } from "react-router-dom";
+import { createPledge } from '../services/pledges.js';
 
-export default function Charity() {
+export default function Charity(props) {
+  const { user } = props
   const [charity, setCharity] = useState({})
+  const [pledge, setPledge] = useState({
+    email: '',
+    amount: '',
+    charity: ''
+  })
 
   let { id } = useParams()
 
@@ -15,6 +22,20 @@ export default function Charity() {
   useEffect(() => {
     fetchCharity()
   }, [])
+
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(pledge)
+    await createPledge(pledge)
+  }
+
+    const handleChange = (e) => {
+    setPledge({email: user.email,
+      amount: e.target.value,
+      charity: charity.name
+    })
+  }
 
   return (
     <div>
@@ -30,6 +51,19 @@ export default function Charity() {
         <p>Click the link below to donate!</p>
         <a href={charity.website}>{charity.website}</a>
       </div>
+        <div className='Pledges'>
+        <header>Pledges</header>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <input type="text" placeholder="Enter your Amount" onChange={handleChange}/>
+          <input type="submit" value="Pledge!" />
+        </form>
+        
+        <div>World-Help User Pledges</div>
+        <div>Pledge Placeholder</div>
+
+        </div>
+
+
     </div>
   )
 }

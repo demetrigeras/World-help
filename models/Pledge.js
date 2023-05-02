@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 let Pledge = new Schema({
-    username: {type: String},
-    Amount:{type: String}
+    email: {type: String, require: true},
+    amount: {type: Number, require: true}
 
 })
 

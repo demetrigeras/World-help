@@ -18,9 +18,9 @@ export const createPledge = async (pledge) => {
     }
   };
 
-  export const updatePledge = async (pledge) => {
+  export const updatePledge = async (id, update) => {
     try {
-      const response = await api.put("/pledges", pledge);
+      const response = await api.put(`/pledges/${id}`, update);
       return response.data;
     } catch (error) {
       throw error;

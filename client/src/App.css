@@ -48,8 +48,11 @@ img {
 
 .title {
   display: flex;
-  flex-direction: row;
-  justify-content:center;
-  margin-top: 1.5%;
+  justify-content: center;
+  object-fit:contain ;
+  color: ;
 }
 
+.home{
+  display: flex;
+}

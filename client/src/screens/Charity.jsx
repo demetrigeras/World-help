@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getCharity } from '../services/charities.js';
 import { useParams } from "react-router-dom";
-import { getPledges, createPledge, updatePledge, deletePledge } from '../services/pledges.js';
+import { getPledges, createPledge } from '../services/pledges.js';
 import Pledge from '../components/Pledge.jsx';
 
 
@@ -63,14 +63,21 @@ export default function Charity(props) {
       </div>
         <div className='Pledges'>
         <header>Pledges</header>
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <input type="text" placeholder="Enter your Amount" onChange={handleChange}/>
-          <input type="submit" value="Pledge!" />
-        </form>
-        
+        {user ?
+          (
+            <form onSubmit={(e) => handleSubmit(e)}>
+              <input type="text" placeholder="Enter your Amount" onChange={handleChange}/>
+              <input type="submit" value="Pledge!" />
+            </form>
+          )
+          :
+          (
+            <div>Sign up or sign in to make a pledge!</div>
+          )
+        }
         <div>World-Help User Pledges</div>
         <div>{filteredPledges.map((pledge) => (
-          <Pledge key={pledge._id} pledge={pledge}/>
+          <Pledge key={pledge._id} user={user} pledge={pledge} function={fetchPledges}/>
         ))}
         </div>
       </div>

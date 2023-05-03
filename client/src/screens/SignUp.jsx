@@ -6,7 +6,7 @@ const SignUp = (props) => {
   const navigate = useNavigate()
 
   const [form, setForm] = useState({
-    name: "",
+    name: '',
     email: '',
     password: '',
     passwordConfirmation: '',

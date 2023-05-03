@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { updatePledge, deletePledge } from '../services/pledges.js';
 
 

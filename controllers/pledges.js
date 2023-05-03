@@ -38,7 +38,7 @@ export const createPledge = async (req, res) => {
 
 export const updatePledge = async (req, res) => {
   const { id } = req.params
-  const pledge = await Pledge.findByIdAndUpdate(id, req.body, { new: true })
+  const pledge = await Pledge.findByIdAndUpdate(id, req.body)
   res.status(200).json(pledge)
 }
 

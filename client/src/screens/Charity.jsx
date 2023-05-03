@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { getCharity } from '../services/charities.js';
 import { useParams } from "react-router-dom";
-import { createPledge } from '../services/pledges.js';
+import { getPledges, createPledge } from '../services/pledges.js';
+import Pledge from '../components/Pledge.jsx';
+
 
 export default function Charity(props) {
   const { user } = props
@@ -11,6 +13,7 @@ export default function Charity(props) {
     amount: '',
     charity: ''
   })
+  const [pledges, setPledges] = useState([])
 
   let { id } = useParams()
 
@@ -21,6 +24,7 @@ export default function Charity(props) {
 
   useEffect(() => {
     fetchCharity()
+    fetchPledges()
   }, [])
 
   
@@ -30,22 +34,26 @@ export default function Charity(props) {
     await createPledge(pledge)
   }
 
-    const handleChange = (e) => {
+  const handleChange = (e) => {
     setPledge({email: user.email,
       amount: e.target.value,
       charity: charity.name
     })
   }
+  
+  const fetchPledges = async () => {
+    const allPledges = await getPledges()
+    setPledges(allPledges)
+  }
+  const filteredPledges = pledges.filter(pledge => pledge.charity === charity.name)
 
   return (
   <>  
     <div className="charity-container">
-
       <div className="top-container">
         <h1>{charity.name}</h1>
         <p>{charity.mission_statement}</p>
       </div>
-
       <div className="left-container">
         <div className='charityInfo'>
           <p>Mission Statement: {charity.mission_statements}</p>
@@ -60,23 +68,28 @@ export default function Charity(props) {
       </div>
 
       <div className="right-container">
-
-          <div className='Pledges'>
-            <header>Pledges</header>
-            <form onSubmit={(e) => handleSubmit(e)}>
-              <input type="text" placeholder="Enter your Amount" onChange={handleChange}/>
-              <input type="submit" value="Pledge!" />
-            </form>
-          </div>
-
-          <div className="bottom-right-container">
-            <div>World-Help User Pledges</div>
-            <div>Pledge Placeholder</div>
-          </div>
-          
+        <div className='Pledges'>
+          <header>Pledges</header>
+            {user ? (
+              <form onSubmit={(e) => handleSubmit(e)}>
+                <input type="text" placeholder="Enter your Amount" onChange={handleChange}/>
+                <input type="submit" value="Pledge!" />
+              </form>
+             )
+             :
+             (
+              <div>Sign up or sign in to make a pledge!</div>
+             )
+            }
+       </div>
+       <div className="bottom-right-container">
+        <div>World-Help User Pledges</div>
+        <div>{filteredPledges.map((pledge) => (
+          <Pledge key={pledge._id} user={user} pledge={pledge} function={fetchPledges}/>
+        ))}
+       </div>
       </div>
-
     </div>
-    </>
-  )
-}
+  </div>
+</>
+)}

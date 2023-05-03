@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 
 export default function Nav(props) {
   const { user } = props
-  console.log({user}, user)
 
   return (
     <nav>

@@ -30,7 +30,7 @@ export const createPledge = async (pledge) => {
 
   export const deletePledge = async (id) => {
     try {
-      const response = await api.delete("/pledges", id);
+      const response = await api.delete(`/pledges/${id}`);
       return response.data;
     } catch (error) {
       throw error;

@@ -20,10 +20,11 @@ exp.setDate(today.getDate() + 30)
 
 export const signUp = async (req, res) => {
   try {
-    const { email, password } = req.body
+    const { name, email, password } = req.body
     const password_digest = await bcrypt.hash(password, SALT_ROUNDS)
     
     const user = new User({
+      name,
       email,
       password_digest,
     })
@@ -31,6 +32,7 @@ export const signUp = async (req, res) => {
     await user.save()
 
     const payload = {
+      name: user.name,
       id: user._id,
       email: user.email,
       exp: parseInt(exp.getTime() / 1000),
@@ -46,12 +48,13 @@ export const signUp = async (req, res) => {
 
 export const signIn = async (req, res) => {
   try {
-    const { email, password } = req.body
+    const { name, email, password } = req.body
     const user = await User.findOne({ email: email }).select(
-      'username email password_digest'
+      'name email password_digest'
     )
     if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
+        name: user.name,
         id: user._id,
         email: user.email,
         exp: parseInt(exp.getTime() / 1000),

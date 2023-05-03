@@ -33,6 +33,7 @@ export default function Charity(props) {
     e.preventDefault();
     console.log(pledge)
     await createPledge(pledge)
+    setToggle(prev => !prev)
   }
 
   const handleChange = (e) => {

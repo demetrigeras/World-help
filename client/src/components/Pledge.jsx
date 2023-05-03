@@ -3,7 +3,7 @@ import { updatePledge, deletePledge } from '../services/pledges.js';
 
 
 export default function Pledge(props) {
-    const {pledge, user, fetchPledges} = props
+    const {pledge, user, fetchPledges, setToggle} = props
     const [pledgeUpdate, setUpdatePledge] = useState("")
 
     const handleUpdateChange = (e) => {
@@ -14,17 +14,19 @@ export default function Pledge(props) {
     
     const handleUpdate = async (e) => {
         e.preventDefault();
-    await updatePledge(pledge._id, pledgeUpdate)
+        await updatePledge(pledge._id, pledgeUpdate)
+        setToggle(prev => !prev)
     }
 
     const handleDelete = async (e) => {
         e.preventDefault();
-    await deletePledge(pledge._id)
+        await deletePledge(pledge._id)
+        setToggle(prev => !prev)
     }
 
     return (
-        <div>{pledge.email} has donated ${pledge.amount}
-        { user.email === pledge.email && 
+        <div>{pledge?.email} has donated ${pledge?.amount}
+        { user?.email === pledge?.email && 
           (<>
             <form onSubmit={handleUpdate}>
                 <input type="text" placeholder="Enter your Amount" onChange={handleUpdateChange} />

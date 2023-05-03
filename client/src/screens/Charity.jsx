@@ -14,6 +14,7 @@ export default function Charity(props) {
     charity: ''
   })
   const [pledges, setPledges] = useState([])
+  const [toggle, setToggle] = useState(false)
 
   let { id } = useParams()
 
@@ -25,7 +26,7 @@ export default function Charity(props) {
   useEffect(() => {
     fetchCharity()
     fetchPledges()
-  }, [])
+  }, [toggle])
 
   
   const handleSubmit = async (e) => {
@@ -85,7 +86,7 @@ export default function Charity(props) {
        <div className="bottom-right-container">
         <div>World-Help User Pledges</div>
         <div>{filteredPledges.map((pledge) => (
-          <Pledge key={pledge._id} user={user} pledge={pledge} function={fetchPledges}/>
+          <Pledge key={pledge._id} user={user} pledge={pledge} function={fetchPledges} setToggle={setToggle}/>
         ))}
        </div>
       </div>

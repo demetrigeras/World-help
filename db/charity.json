@@ -133,15 +133,15 @@
     "mission_statements": "Releasing children from poverty in Jesus' name."
   },
   {
-    "name": "Catholic Charities USA",
+    "name": "The Trevor Project",
     "category": "Domestic Needs",
-    "private_donations": "$1.04 B",
-    "total_revenue": "$4.67 B",
+    "private_donations": "$53.8 M",
+    "total_revenue": "$58.9 M",
     "fundraising_efficiency": 91,
-    "charitable_commitment": 87,
-    "website": "https://www.catholiccharitiesusa.org/",
-    "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Catholic_Charities_USA_logo.svg/800px-Catholic_Charities_USA_logo.svg.png",
-    "mission_statements": "To provide service to people in need, to advocate for justice in social structures, and to call the entire church and other people of good will to do the same."
+    "charitable_commitment": 99,
+    "website": "https://www.thetrevorproject.org/",
+    "logo":"https://www.thetrevorproject.org/wp-content/uploads/2021/09/METADATA_IMG_ORANGE-BG.jpg",
+    "mission_statements": "Building a safer, more inclusive world."
   },
   {
     "name": "Samaritan's Purse",

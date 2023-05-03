@@ -32,15 +32,6 @@ export const signOut = async () => {
   }
 }
 
-export const changePassword = async (passwords, user) => {
-  try {
-    const resp = await api.post('/')
-    return resp.data
-  } catch (error) {
-    throw error
-  }
-}
-
 export const verifyUser = async () => {
   const token = localStorage.getItem('token')
   if (token) {

@@ -8,7 +8,7 @@ const getToken = () => {
 
 const api = axios.create({
     baseURL: process.env.NODE_ENV === 'production'
-        ? 'https://sei-products-api.herokuapp.com/api'
+        ? 'https://world-help-app.herokuapp.com/world-help/'
         : 'http://localhost:3000/World-help/'
 })
 

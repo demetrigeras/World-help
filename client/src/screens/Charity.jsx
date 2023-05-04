@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react';
 import { getCharity } from '../services/charities.js';
 import { useParams } from "react-router-dom";
 import { getPledges, createPledge } from '../services/pledges.js';

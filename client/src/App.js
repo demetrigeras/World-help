@@ -9,6 +9,7 @@ import SignUp from "./screens/SignUp.jsx";
 import SignIn from "./screens/SignIn.jsx";
 import SignOut from "./screens/SignOut.jsx";
 
+
 function App() {
   const [user, setUser] = useState(null)
 

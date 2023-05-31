@@ -1,4 +1,3 @@
-// import Charity from "../models/Cat.js";
 import Charity from "../models/Charity.js"
 
 
@@ -34,6 +33,16 @@ export const createCharity = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+// export const createCharity = async (req, res) => {
+//   try {
+//     const charity = new Charity(req.body);
+//     await charity.save(); 
+//     res.status(201).json(charity);
+//   } catch (error) {
+//     console.log(error.message);
+//     res.status(500).json({ error: error.message });
+//   }
+// };
 
 export const updateCharity = async (req, res) => {
   const { id } = req.params;

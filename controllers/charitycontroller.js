@@ -23,11 +23,13 @@ export const getCharity = async (req, res) => {
   }
 };
 
+
 export const createCharity = async (req, res) => {
   try {
     const charity = new Charity(req.body);
-    await charity.save(charity);
-    res.status(201).json(charity);
+    await charity.save();
+    console.log(req.body)
+    res.status(201).json(charity); // Send the complete charity object in the response
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: error.message });
@@ -36,8 +38,8 @@ export const createCharity = async (req, res) => {
 // export const createCharity = async (req, res) => {
 //   try {
 //     const charity = new Charity(req.body);
-//     await charity.save(); 
-//     res.status(201).json(charity);
+//     const savedCharity = await charity.save();
+//     res.status(201).json(savedCharity); // Send the complete saved charity object in the response
 //   } catch (error) {
 //     console.log(error.message);
 //     res.status(500).json({ error: error.message });

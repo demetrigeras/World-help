@@ -5,7 +5,7 @@ const router = Router();
 
 router.get("/", controllers.getCharities);
 router.get("/:id", controllers.getCharity);
-router.post("/addchar", controllers.createCharity);
+router.post("/", controllers.createCharity);
 router.put("/:id", controllers.updateCharity);
 router.delete("/:id", controllers.deleteCharity);
 
